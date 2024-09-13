@@ -11,9 +11,13 @@ function App() {
 
   const calculate = () => {
     try {
-      const evalResult = eval(input); 
-      setInput(evalResult?.toString()); 
-      setResult(evalResult);
+      if(input == ''){
+        setInput("Error");
+      }else{
+        const evalResult = eval(input); 
+        setInput(evalResult?.toString()); 
+        setResult(evalResult);
+      }
     } catch (error) {
       setInput("Error"); 
     }
