@@ -12,7 +12,7 @@ function App() {
   const calculate = () => {
     try {
       if(input == ''){
-        setInput("Error");
+        setResult("Error")
       }else{
         const evalResult = eval(input); 
         setInput(evalResult?.toString()); 
